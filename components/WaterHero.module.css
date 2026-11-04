@@ -1,0 +1,151 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100svh - 61px);
+  display: flex;
+  align-items: center;
+}
+
+/* A full-height sheet that slides up, so the rise never reflows the page. */
+.water {
+  position: absolute;
+  inset: 0;
+  background: var(--water-fill);
+  transform: translateY(calc(100% - var(--level)));
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 200%;
+  height: 14px;
+  fill: var(--water-fill);
+  animation: drift 14s linear infinite;
+}
+
+@keyframes drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* The bottom mark sits at 0 mL and the top at 500 mL, matching the water level. */
+.gauge {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid var(--line);
+  background-image: repeating-linear-gradient(
+    to top,
+    var(--line) 0 1px,
+    transparent 1px 2%
+  );
+  background-size: 10px 100%;
+  background-repeat: no-repeat;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.gauge li {
+  padding: 4px 6px 4px 16px;
+  text-align: right;
+}
+
+.content {
+  position: relative;
+  display: grid;
+  gap: 28px 64px;
+  padding-block: 48px;
+  padding-right: calc(64px + var(--gutter));
+}
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.lead h1 {
+  max-width: 19ch;
+}
+
+.intro {
+  max-width: 52ch;
+  font-size: 1.1875rem;
+}
+
+.actions,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.meter {
+  width: 100%;
+  max-width: 560px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ink);
+}
+
+.readout {
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: clamp(3.25rem, 8vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.readout span {
+  font-size: 0.4em;
+}
+
+@media (min-width: 1000px) {
+  .content {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    align-items: end;
+  }
+}
+
+.status {
+  min-height: 3em;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.note {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .gauge {
+    width: 40px;
+    font-size: 0.6875rem;
+  }
+
+  .gauge li {
+    padding-left: 12px;
+    padding-right: 3px;
+  }
+
+  .content {
+    padding-block: 32px;
+    padding-right: calc(40px + 12px);
+  }
+
+  .lead {
+    gap: 16px;
+  }
+}

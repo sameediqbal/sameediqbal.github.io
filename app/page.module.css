@@ -1,0 +1,62 @@
+.intro {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.columns {
+  display: grid;
+  gap: 32px 56px;
+}
+
+.column {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  max-width: var(--measure);
+  padding-top: 14px;
+  border-top: 3px solid var(--water);
+}
+
+.column:last-child {
+  border-top-color: var(--copper);
+}
+
+.more {
+  margin-top: 36px;
+}
+
+.contact {
+  background: var(--surface);
+}
+
+.contactIntro {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.contactLinks {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+  font-family: var(--font-mono);
+  font-size: clamp(0.9375rem, 2.6vw, 1.25rem);
+  overflow-wrap: anywhere;
+}
+
+.contactLinks a {
+  display: inline-block;
+  padding-block: 4px;
+}
+
+@media (min-width: 760px) {
+  .intro {
+    grid-template-columns: 5fr 7fr;
+    gap: 40px;
+    align-items: end;
+  }
+
+  .columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}

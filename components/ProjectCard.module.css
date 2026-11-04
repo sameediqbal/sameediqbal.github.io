@@ -1,0 +1,46 @@
+.card {
+  position: relative;
+  display: grid;
+  gap: 16px 40px;
+  padding-block: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.text h3 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+.text h3 a {
+  text-decoration: none;
+}
+
+/* Makes the whole card clickable from the one real link in the title. */
+.text h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.card:hover h3 a {
+  color: var(--copper);
+}
+
+.more {
+  color: var(--water);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+@media (min-width: 760px) {
+  .card {
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+  }
+}
