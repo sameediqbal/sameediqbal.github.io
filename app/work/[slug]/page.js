@@ -35,6 +35,7 @@ export default async function CaseStudy({ params }) {
           <Link prefetch={false} href="/#work">Work</Link> / {project.year}
         </p>
         <h1>{project.title}</h1>
+        {project.tagline && <p className={styles.tagline}>{project.tagline}</p>}
         <p className={styles.summary}>{project.summary}</p>
       </header>
 
@@ -44,7 +45,7 @@ export default async function CaseStudy({ params }) {
 
       <div className={`wrap ${styles.body}`}>
         <div className={styles.facts}>
-          <QuickFacts facts={project.facts} link={project.link} />
+          <QuickFacts facts={project.facts} links={project.links} />
         </div>
 
         <div className={styles.story}>

@@ -4,18 +4,18 @@
 export const site = {
   name: "Sameed Iqbal",
   location: "Chicago",
+  url: "https://sameediqbal.github.io",
   description:
     "Sameed Iqbal is an Information Systems graduate student and IT support specialist in Chicago who builds installations that show what AI costs in water and energy.",
 
   email: "Siqbal33@depaul.edu",
   linkedin: "https://www.linkedin.com/in/sameediqbal22",
   linkedinLabel: "linkedin.com/in/sameediqbal22",
-  // Replace with your full GitHub profile URL, for example "https://github.com/yourname".
-  github: "TODO: add your GitHub link",
+  github: "https://github.com/sameediqbal",
+  githubLabel: "github.com/sameediqbal",
 
-  // Stays null until a phone-free PDF is saved as public/resume.pdf.
-  // Then change this to "/resume.pdf". Do not add a copy that shows your phone number.
-  resumeUrl: null,
+  // Must stay a copy without your phone number. The site never shows it.
+  resumeUrl: "/resume.pdf",
 
   nav: [
     { label: "Work", href: "/#work" },

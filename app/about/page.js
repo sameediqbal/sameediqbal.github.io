@@ -1,5 +1,5 @@
 import ContactLinks from "@/components/ContactLinks";
-import Copy from "@/components/Copy";
+import Photo from "@/components/PhotoPlaceholder";
 import Timeline from "@/components/Timeline";
 import { about } from "@/content/about";
 import { site } from "@/content/site";
@@ -21,7 +21,12 @@ export default function About() {
   return (
     <div className="wrap">
       <header className={styles.header}>
-        <h1>{about.heading}</h1>
+        <div className={styles.intro}>
+          <h1>{about.heading}</h1>
+          <div className={styles.photo}>
+            <Photo photo={about.photo} ratio="4 / 5" priority />
+          </div>
+        </div>
         <div className={styles.bio}>
           {about.bio.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -79,15 +84,9 @@ export default function About() {
       </Row>
 
       <Row id="resume" heading={about.resumeHeading}>
-        {site.resumeUrl ? (
-          <a className="button button-solid" href={site.resumeUrl} download>
-            {about.resumeDownload}
-          </a>
-        ) : (
-          <p>
-            <Copy text={about.resumeTodo} />
-          </p>
-        )}
+        <a className="button button-solid" href={site.resumeUrl} download>
+          {about.resumeDownload}
+        </a>
       </Row>
     </div>
   );

@@ -5,8 +5,20 @@
   border: 0;
 }
 
+.landscape {
+  aspect-ratio: 16 / 9;
+}
+
+/* TikTok's player has a fixed layout with its caption below the video. */
 .portrait {
   max-width: 340px;
+  height: 740px;
+}
+
+.credit {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
 }
 
 .box {

@@ -8,6 +8,13 @@
   max-width: 24ch;
 }
 
+.tagline {
+  color: var(--water);
+  font-family: var(--font-mono);
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
 .summary {
   max-width: var(--measure);
   font-size: 1.1875rem;

@@ -8,6 +8,17 @@
   padding-block: clamp(36px, 6vw, 72px);
 }
 
+.intro {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+.photo {
+  width: 100%;
+  max-width: 220px;
+}
+
 .bio {
   display: grid;
   gap: 14px;

@@ -3,6 +3,11 @@
 
 export const about = {
   heading: "About",
+  photo: {
+    src: "/images/sameed.jpg",
+    ready: true,
+    alt: "Sameed Iqbal in a black T-shirt, seated in a cafe",
+  },
   bio: [
     "I'm Sameed Iqbal, from Sindh, Pakistan, and now based in Chicago. I'm an M.S. Information Systems student at DePaul University's Jarvis College of Computing and Digital Media (CDM), expected to finish in April 2027.",
     "At CDM I work as a Technology Support Specialist, keeping lab hardware and software running. I also work with the RAISE Lab on making AI's environmental and social costs visible, and I build working hardware-software systems for public exhibitions.",
@@ -33,7 +38,7 @@ export const about = {
     {
       title: "Researcher",
       org: "RAISE Lab, DePaul University, with Dr. Jay Cunningham",
-      dates: "TODO: add your start date",
+      dates: "Oct 2025–present",
       points: ["Research on making AI's environmental and social costs visible."],
     },
     {
@@ -142,6 +147,4 @@ export const about = {
 
   resumeHeading: "Resume",
   resumeDownload: "Download resume (PDF)",
-  resumeTodo:
-    "TODO: save a phone-free PDF as public/resume.pdf, then set resumeUrl in content/site.js.",
 };

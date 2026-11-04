@@ -18,14 +18,9 @@ export default function Header() {
               </li>
             ))}
             <li>
-              {/* Goes to the About page's TODO until a phone-free PDF is added. */}
-              {site.resumeUrl ? (
-                <a href={site.resumeUrl} download>
-                  Resume
-                </a>
-              ) : (
-                <Link prefetch={false} href="/about/#resume">Resume</Link>
-              )}
+              <a href={site.resumeUrl} download>
+                Resume
+              </a>
             </li>
           </ul>
         </nav>

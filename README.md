@@ -66,29 +66,26 @@ In `content/projects.js`, set the project's `video.src` to an embed URL (not the
 
 `VIDEO_ID` is the code at the end of the video's normal URL. Keep `portrait: true` for vertical video. To remove the video section from a project, set `video: null`.
 
-## Add your resume
+## Update your resume
 
-**Use a copy without your phone number.** Your phone number is deliberately left off this site, and anything committed stays in the public git history even if you delete it later.
+Replace `public/resume.pdf`, keeping the same filename. The nav link and the About page button both download it.
 
-1. Save the phone-free PDF as `public/resume.pdf`.
-2. In `content/site.js`, change `resumeUrl: null` to `resumeUrl: "/resume.pdf"`.
-
-The nav link and the About page button then download the PDF.
+**Always use a copy without your phone number.** Your phone number is deliberately left off this site, and anything committed stays in the public git history even if you delete it later.
 
 ## Deploy to GitHub Pages
 
 The first time:
 
-1. Create a public GitHub repository named `<username>.github.io`, using your GitHub username.
+1. Create a public GitHub repository named `sameediqbal.github.io`.
 2. In the repository, go to **Settings > Pages** and set **Source** to **GitHub Actions**.
 3. Connect this folder and push:
 
    ```bash
-   git remote add origin https://github.com/<username>/<username>.github.io.git
+   git remote add origin https://github.com/sameediqbal/sameediqbal.github.io.git
    git push -u origin main
    ```
 
-The site goes live at `https://<username>.github.io`. Check progress in the repository's **Actions** tab.
+The site goes live at `https://sameediqbal.github.io`. Check progress in the repository's **Actions** tab.
 
 After that, every push to `main` builds and deploys automatically through `.github/workflows/deploy.yml`.
 

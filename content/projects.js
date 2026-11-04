@@ -10,6 +10,7 @@ export const projects = [
     slug: "cost-of-a-click-2",
     title: "Cost of a Click 2.0: The Environment Remembers",
     shortTitle: "Cost of a Click 2.0",
+    tagline: "AI feels invisible. Its impact isn't.",
     year: "2026",
     summary:
       "An expanded installation with a projected U.S. data center map, a thermal receipt printer, and a visitor question wall, shown at Science Works.",
@@ -20,10 +21,18 @@ export const projects = [
       label: "Wide shot of the full installation at Science Works",
     },
     facts: [
-      { label: "Role", value: "Team lead; wrote the control software" },
+      {
+        label: "Role",
+        value: "Research and Community Content Lead; wrote the control software",
+      },
       { label: "Dates", value: "Summer 2026" },
-      { label: "Team", value: "Four people" },
+      {
+        label: "Team",
+        value:
+          "Sameed Iqbal (Research and Community Content Lead), Arushi Malhotra (Technical Lead), Seeza Wasim (Design and Fabrication Lead), Yoonyoung Kim (UX Research and Visitor Experience Lead)",
+      },
       { label: "Funding", value: "Design IMPACT Grant, DePaul" },
+      { label: "Supported by", value: "Code Your Dreams and DePaul University" },
       {
         label: "Shown at",
         value:
@@ -35,13 +44,23 @@ export const projects = [
           "Python, python-escpos, Rongta thermal printer, Arduino UNO R4, relay, pump",
       },
     ],
-    link: { label: "Project site", url: "https://costofaclick.netlify.app/" },
+    links: [
+      { label: "Project site", url: "https://costofaclick.netlify.app/" },
+      {
+        label: "Interactive map",
+        url: "https://costofaclick.netlify.app/interactive-map",
+      },
+      {
+        label: "Research and sources",
+        url: "https://costofaclick.netlify.app/research",
+      },
+    ],
     sections: [
       {
         heading: "Problem",
         body: [
-          "AI's water and energy costs are hidden from the people using it. This project builds on the original Cost of a Click, which pumped water into a visible tank with each prompt.",
-          "TODO: add what you wanted version 2.0 to do that the first version didn't.",
+          "AI's water and energy costs are hidden from the people using it. This project doesn't ask people to stop using AI. It asks them to see what it requires.",
+          "It builds on the original Cost of a Click, which pumped water into a visible tank with each prompt.",
         ],
       },
       {
@@ -53,6 +72,7 @@ export const projects = [
       {
         heading: "How it works",
         body: [
+          "A visitor enters a prompt. The data center map lights up, a water drop falls, and an impact receipt prints showing water, energy, and carbon.",
           "I wrote the control software. Python prints receipts over USB, using python-escpos and a Rongta thermal printer. It also sends serial commands to an Arduino UNO R4, which runs a pump through a relay for a timed run.",
         ],
         diagram: {
@@ -120,14 +140,21 @@ export const projects = [
       label: "The installation with the tank and the tree on screen",
     },
     facts: [
-      { label: "Role", value: "TODO: add your role on this project" },
+      { label: "Role", value: "Project Developer" },
       { label: "Dates", value: "Summer 2025" },
-      { label: "Team", value: "TODO: add the team. Built with Code Your Dreams" },
+      {
+        label: "Team",
+        value:
+          "Siddharth Maurya (PM), Ramya Yerramilli (UI/UX), Sameed Iqbal (Developer), Harsha Jain (Designer)",
+      },
+      { label: "Built with", value: "Code Your Dreams" },
       { label: "Funding", value: "IMPACT Summer Grant, DePaul" },
       { label: "Shown at", value: "Digital Inclusion Week 2025" },
       { label: "Tools", value: "Arduino, submersible pump, Python" },
     ],
-    link: null,
+    links: [
+      { label: "Project site", url: "https://invisibleimpact.framer.website/" },
+    ],
     sections: [
       {
         heading: "Problem",
@@ -174,10 +201,14 @@ export const projects = [
       },
     ],
     video: {
-      src: null,
-      title: "Cost of a Click TikTok video",
+      src: "https://www.tiktok.com/embed/v2/7563714947939585291",
+      title: "TikTok video of Cost of a Click by @thetshegofatso",
       label: "The TikTok video of the installation",
       portrait: true,
+      credit: {
+        label: "TikTok by @thetshegofatso",
+        url: "https://www.tiktok.com/@thetshegofatso/video/7563714947939585291",
+      },
     },
   },
   {
@@ -203,7 +234,7 @@ export const projects = [
       },
       { label: "Tools", value: "TODO: add the tools you use" },
     ],
-    link: { label: "Civic Energy site", url: "https://www.civic-energy.com/" },
+    links: [{ label: "civic-energy.com", url: "https://www.civic-energy.com/" }],
     sections: [
       {
         heading: "Problem",

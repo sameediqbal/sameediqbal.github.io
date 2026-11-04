@@ -15,7 +15,7 @@ export default function ContactLinks({ className }) {
         {isTodo(site.github) ? (
           <Copy text={site.github} />
         ) : (
-          <a href={site.github}>GitHub</a>
+          <a href={site.github}>{site.githubLabel}</a>
         )}
       </li>
     </ul>

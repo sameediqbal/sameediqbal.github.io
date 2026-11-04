@@ -25,8 +25,15 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL(site.url),
   title: { default: site.name, template: `%s | ${site.name}` },
   description: site.description,
+  openGraph: {
+    title: site.name,
+    description: site.description,
+    url: "/",
+    type: "website",
+  },
 };
 
 // Runs before first paint so a saved theme choice doesn't flash the wrong colors.
