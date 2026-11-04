@@ -1,0 +1,48 @@
+/* The line down the left reads as a gauge, with a tick at each role. */
+.timeline {
+  display: grid;
+  gap: 32px;
+  border-left: 1px solid var(--line);
+}
+
+.item {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  padding-left: 20px;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 12px;
+  height: 2px;
+  background: var(--water);
+}
+
+.org {
+  color: var(--muted);
+}
+
+.points {
+  display: grid;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.points li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 7px;
+  height: 1px;
+  background: var(--muted);
+}
