@@ -7,14 +7,14 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`wrap ${styles.inner}`}>
-        <Link href="/" className={styles.name}>
+        <Link prefetch={false} href="/" className={styles.name}>
           {site.name}
         </Link>
         <nav className={styles.nav} aria-label="Main">
           <ul className={styles.links}>
             {site.nav.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <Link prefetch={false} href={item.href}>{item.label}</Link>
               </li>
             ))}
             <li>
@@ -24,7 +24,7 @@ export default function Header() {
                   Resume
                 </a>
               ) : (
-                <Link href="/about/#resume">Resume</Link>
+                <Link prefetch={false} href="/about/#resume">Resume</Link>
               )}
             </li>
           </ul>

@@ -64,7 +64,7 @@ export default function WaterHero({ hero, water }) {
             <a className="button" href={hero.primaryCta.href}>
               {hero.primaryCta.label}
             </a>
-            <Link className="button" href={hero.secondaryCta.href}>
+            <Link prefetch={false} className="button" href={hero.secondaryCta.href}>
               {hero.secondaryCta.label}
             </Link>
           </div>

@@ -8,7 +8,7 @@ export default function NotFound() {
       <p className="label">404</p>
       <h1>This page doesn't exist.</h1>
       <p style={{ marginTop: "16px" }}>
-        <Link href="/">Back to the home page</Link>
+        <Link prefetch={false} href="/">Back to the home page</Link>
       </p>
     </div>
   );

@@ -32,7 +32,7 @@ export default async function CaseStudy({ params }) {
     <article>
       <header className={`wrap ${styles.header}`}>
         <p className="label">
-          <Link href="/#work">Work</Link> / {project.year}
+          <Link prefetch={false} href="/#work">Work</Link> / {project.year}
         </p>
         <h1>{project.title}</h1>
         <p className={styles.summary}>{project.summary}</p>
@@ -75,7 +75,7 @@ export default async function CaseStudy({ params }) {
       )}
 
       <nav className={styles.next} aria-label="Next project">
-        <Link href={`/work/${next.slug}/`} className="wrap">
+        <Link prefetch={false} href={`/work/${next.slug}/`} className="wrap">
           <span className="label">Next project</span>
           <span className={styles.nextTitle}>{next.shortTitle} →</span>
         </Link>

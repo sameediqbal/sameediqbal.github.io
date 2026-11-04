@@ -38,7 +38,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <Link className={`button ${styles.more}`} href="/about/">
+          <Link prefetch={false} className={`button ${styles.more}`} href="/about/">
             {home.aboutLink}
           </Link>
         </div>

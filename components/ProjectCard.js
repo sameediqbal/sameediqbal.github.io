@@ -13,7 +13,7 @@ export default function ProjectCard({ project, index }) {
           {String(index + 1).padStart(2, "0")} / {project.year}
         </p>
         <h3>
-          <Link href={`/work/${project.slug}/`}>{project.shortTitle}</Link>
+          <Link prefetch={false} href={`/work/${project.slug}/`}>{project.shortTitle}</Link>
         </h3>
         <p>{project.summary}</p>
         <p className={styles.more} aria-hidden="true">
