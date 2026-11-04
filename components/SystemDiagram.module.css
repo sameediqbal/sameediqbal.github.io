@@ -1,0 +1,100 @@
+.figure {
+  margin: 24px 0 0;
+}
+
+.diagram {
+  padding: 20px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+/* Phone: everything stacks and flows downward. */
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.node + .node::before {
+  content: "↓" / "";
+  padding: 4px 0 4px 12px;
+  color: var(--water);
+}
+
+.node {
+  font-weight: 500;
+}
+
+.branches {
+  display: grid;
+  gap: 16px;
+  margin-top: 4px;
+  margin-left: 12px;
+  padding-top: 16px;
+  padding-left: 16px;
+  border-left: 2px solid var(--water);
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.link {
+  padding: 1px 6px;
+  background: var(--water);
+  color: var(--on-accent);
+  font-size: 0.75rem;
+}
+
+/* Wide: the same structure reads left to right. */
+@media (min-width: 640px) {
+  .diagram {
+    display: flex;
+    align-items: center;
+  }
+
+  .flow {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .node {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .node + .node::before {
+    content: "→" / "";
+    padding: 0 8px;
+  }
+
+  .branches {
+    margin: 0 0 0 16px;
+    padding: 4px 0 4px 16px;
+  }
+
+  .branch {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.caption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}

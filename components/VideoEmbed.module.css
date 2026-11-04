@@ -1,0 +1,35 @@
+.landscape,
+.portrait {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.portrait {
+  max-width: 340px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  border: 1.5px dashed var(--muted);
+  background: var(--surface);
+}
+
+.tag {
+  padding: 0.1em 0.4em;
+  background: var(--todo-bg);
+  color: var(--todo-ink);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.3;
+}

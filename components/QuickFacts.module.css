@@ -1,0 +1,47 @@
+.receipt {
+  --tooth: 8px;
+  padding: 20px 20px calc(20px + var(--tooth));
+  background: var(--surface);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  /* Torn paper edge along the bottom. */
+  -webkit-mask:
+    linear-gradient(#000 0 0) top / 100% calc(100% - var(--tooth)) no-repeat,
+    conic-gradient(from -45deg at 50% 100%, #000 90deg, #0000 0) bottom left /
+      calc(var(--tooth) * 2) var(--tooth) repeat-x;
+  mask:
+    linear-gradient(#000 0 0) top / 100% calc(100% - var(--tooth)) no-repeat,
+    conic-gradient(from -45deg at 50% 100%, #000 90deg, #0000 0) bottom left /
+      calc(var(--tooth) * 2) var(--tooth) repeat-x;
+}
+
+.title {
+  padding-bottom: 12px;
+  border-bottom: 1.5px dashed var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.list {
+  margin: 0;
+}
+
+.row {
+  padding-block: 10px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.row dt {
+  color: var(--muted);
+}
+
+.row dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.link {
+  margin-top: 14px;
+}

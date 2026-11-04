@@ -1,0 +1,10 @@
+.gallery {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}

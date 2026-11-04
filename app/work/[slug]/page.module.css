@@ -1,0 +1,79 @@
+.header {
+  display: grid;
+  gap: 14px;
+  padding-block: clamp(36px, 6vw, 72px) 28px;
+}
+
+.header h1 {
+  max-width: 24ch;
+}
+
+.summary {
+  max-width: var(--measure);
+  font-size: 1.1875rem;
+}
+
+.body {
+  display: grid;
+  gap: 36px 64px;
+  padding-block: 40px clamp(48px, 7vw, 80px);
+}
+
+.story {
+  display: grid;
+  gap: 40px;
+  min-width: 0;
+}
+
+.story section {
+  display: grid;
+  gap: 12px;
+  max-width: var(--measure);
+}
+
+.story section > p {
+  max-width: var(--measure);
+}
+
+.media {
+  display: grid;
+  gap: 20px;
+  padding-block: 0 clamp(48px, 7vw, 80px);
+}
+
+.next {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.next a {
+  display: grid;
+  gap: 6px;
+  padding-block: 36px;
+  text-decoration: none;
+}
+
+.next a:hover .nextTitle {
+  color: var(--copper);
+}
+
+.nextTitle {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+@media (min-width: 900px) {
+  .body {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+    align-items: start;
+  }
+
+  .facts {
+    order: 2;
+    position: sticky;
+    top: 24px;
+  }
+}
